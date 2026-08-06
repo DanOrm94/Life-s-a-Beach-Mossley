@@ -1,173 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Life's A Beach | Beauty Salon in Mossley</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Life's A Beach is a friendly beauty, tanning and spa salon on Manchester Road in Mossley offering facials, nails, massage, waxing and more." />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Your Perfect Glow Starts Here | Premium Tanning Salon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="A modern tanning salon offering premium sunbeds, spray tanning, beauty treatments, memberships and skincare. Book your perfect glow today.">
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="Your Perfect Glow Starts Here">
+  <meta property="og:description"
+        content="Premium tanning studio with luxury sunbeds, spray tans, memberships and skincare. Book appointments in seconds.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/">
+  <meta property="og:image" content="https://yourdomain.com/og-image.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+
+  <!-- Structured data: LocalBusiness (simplified; customise for Life's A Beach) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Life's A Beach Tanning & Beauty",
+    "image": "https://yourdomain.com/hero.jpg",
+    "description": "Premium tanning studio with sunbeds, spray tans, beauty treatments, memberships and skincare.",
+    "url": "https://yourdomain.com/",
+    "telephone": "+44 1457 837933",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "50 Manchester Rd",
+      "addressLocality": "Mossley",
+      "addressRegion": "Greater Manchester",
+      "postalCode": "OL5 0AA",
+      "addressCountry": "GB"
+    },
+    "openingHours": [
+      "Tu 09:15-19:30",
+      "We 09:15-19:30",
+      "Th 09:15-20:30",
+      "Fr 09:15-19:30",
+      "Sa 09:00-17:30"
+    ],
+    "priceRange": "$$"
+  }
+  </script>
 </head>
 <body>
-  <header>
-    <div class="header-inner">
-      <a href="index.html" class="brand" aria-label="Life's A Beach home">
-        <div class="brand-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 18c3-3 6-4 9-4s6 1 9 4" />
-            <path d="M4 7c1.5 1 3 1.5 5 1.5 2 0 3.5-.5 5-1.5" />
-            <circle cx="18" cy="6" r="3" />
-          </svg>
-        </div>
-        <div class="brand-text">
-          <h1>Life's A Beach</h1>
-          <p>Beauty & spa salon in Mossley</p>
-        </div>
-      </a>
-      <nav aria-label="Primary navigation">
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html" class="nav-cta">Contact & bookings</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-text">
-        <div class="badge">
-          <span>Rated</span>
-          <strong>4.5 ★</strong>
-          <span>with over 100 Google reviews</span>
-        </div>
-        <h2>Your local escape for sunbeds, nails & spa treatments</h2>
-        <p>
-          Life's A Beach is a welcoming Mossley salon on Manchester Road offering sunbeds, nails, beauty
-          and holistic spa treatments, all under one roof. Relax, recharge and feel your best with friendly
-          therapists and great value packages.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://www.fresha.com/en-GB/lvp/lifes-a-beach-lab-spa-manchester-road-mossley-EvAN0E" target="_blank" rel="noopener noreferrer">
-            Book online with Fresha
-          </a>
-          <a class="btn btn-outline" href="tel:01457837933">Call the salon</a>
-        </div>
-        <p class="review-snippet">
-          "A one stop tanning and hair and beauty salon with health spa on the second floor" – Facebook
-        </p>
+<header>
+  <div class="header-inner">
+    <a href="#top" class="brand" aria-label="Go to top">
+      <div class="brand-mark">
+        <!-- Simple sun logo -->
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" fill="currentColor"></circle>
+          <line x1="12" y1="2" x2="12" y2="5" stroke="currentColor" stroke-width="1.5"></line>
+          <line x1="12" y1="19" x2="12" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+          <line x1="2" y1="12" x2="5" y2="12" stroke="currentColor" stroke-width="1.5"></line>
+          <line x1="19" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.5"></line>
+        </svg>
       </div>
+      <div class="brand-text">
+        <h1>Life's A Beach</h1>
+        <p>Premium Tanning & Beauty Studio</p>
+      </div>
+    </a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#memberships">Memberships</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#booking" class="nav-cta">Book Appointment</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <div class="hero-meta">
+        <span class="hero-pill"><strong>4.5 ★</strong> over 100 local reviews</span>
+        <span class="hero-pill">Fully sanitised rooms</span>
+        <span class="hero-pill">Latest tanning technology</span>
+      </div>
+      <h2 id="hero-title">Your Perfect Glow Starts Here</h2>
+      <p>
+        Experience a modern tanning studio that blends luxury, cleanliness and expert care. From premium sunbeds
+        and bespoke spray tans to beauty treatments, memberships and skincare, every visit is designed to leave you
+        feeling confident, relaxed and radiant.
+      </p>
+      <div class="hero-actions">
+        <a href="#booking" class="btn btn-primary">Book Appointment</a>
+        <a href="#services" class="btn btn-secondary">View Services</a>
+      </div>
+    </div>
+    <div class="hero-visual">
       <div class="hero-image">
-        <div class="card">
-          <h4>Find us</h4>
-          <p>50 Manchester Rd, Mossley, Ashton-under-Lyne OL5 0AA</p>
-          <ul class="info-list">
-            <li><strong>Phone:</strong> <a href="tel:01457837933">01457 837933</a></li>
-            <li><strong>Area:</strong> Mossley, Greater Manchester</li>
-          </ul>
-          <h4 style="margin-top: 1rem;">Opening hours</h4>
-          <div class="hours-grid">
-            <div><span>Monday</span><span>Closed</span></div>
-            <div><span>Tuesday</span><span>9:15am – 7:30pm</span></div>
-            <div><span>Wednesday</span><span>9:15am – 7:30pm</span></div>
-            <div><span>Thursday</span><span>9:15am – 8:30pm</span></div>
-            <div><span>Friday</span><span>9:15am – 7:30pm</span></div>
-            <div><span>Saturday</span><span>9:00am – 5:30pm</span></div>
-            <div><span>Sunday</span><span>Closed</span></div>
+        <img src="https://picsum.photos/seed/tan-hero/1200/600"
+             alt="Luxurious tanning salon interior with warm lighting">
+      </div>
+      <div class="hero-overlay-card">
+        <h3>Premium sunbeds, spray tans & beauty</h3>
+        <p>Memberships, packages and seasonal offers designed around weddings, holidays and everyday glow.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="section-heading">
+      <h3>Services</h3>
+      <p>Curated treatments for your best‑ever glow, from quick top‑ups to full pamper sessions.</p>
+    </div>
+    <div class="services-grid">
+      <!-- repeat for each service -->
+      <article class="service-card">
+        <div class="service-media">
+          <img src="https://picsum.photos/seed/sunbeds/600/400" alt="Modern sunbed tanning suite">
+        </div>
+        <div class="service-body">
+          <h4>Sunbeds</h4>
+          <p>Latest‑generation sunbeds in pristine rooms, with tailored guidance for safe, even tanning.</p>
+          <div class="service-meta">
+            <span class="service-price">From £8 per session</span>
+            <a href="#booking" class="btn btn-tertiary">Learn More</a>
           </div>
         </div>
-      </div>
-    </section>
+      </article>
 
-    <section class="section">
-      <h3>Treatments at Life's A Beach</h3>
-      <div class="grid-3">
-        <article class="card">
-          <h4>Facials & skincare</h4>
-          <p>
-            From deep-cleansing facials to dermaplaning and specialist skin treatments, tailored to your
-            skin type for a glowing, refreshed complexion.
-          </p>
-        </article>
-        <article class="card">
-          <h4>Nails & beauty</h4>
-          <p>
-            Manicures, pedicures, gel polish and nail art alongside brow and lash treatments, make-up and
-            everyday beauty essentials.
-          </p>
-        </article>
-        <article class="card">
-          <h4>Massage & holistic spa</h4>
-          <p>
-            Aromatherapy and deep muscle massage, full body pamper packages and holistic spa rituals to
-            help you unwind from head to toe.
-          </p>
-        </article>
-        <article class="card">
-          <h4>Waxing & hair removal</h4>
-          <p>
-            Full body waxing including intimate waxing, carried out by experienced therapists using
-            high-quality products for smooth results.
-          </p>
-        </article>
-        <article class="card">
-          <h4>Sunbeds & tanning</h4>
-          <p>
-            Modern sunbeds with great saver deals, helping you achieve a holiday glow all year round in a
-            clean, well-maintained salon.
-          </p>
-        </article>
-        <article class="card">
-          <h4>Hairdressing</h4>
-          <p>
-            Wash, cut and blow-dries, colouring and highlighting options with stylists offering friendly
-            advice on styles to suit you.
-          </p>
-        </article>
-      </div>
-    </section>
+      <article class="service-card">
+        <div class="service-media">
+          <img src="https://picsum.photos/seed/spraytan/600/400" alt="Spray tan being applied in a clean studio">
+        </div>
+        <div class="service-body">
+          <h4>Spray Tan</h4>
+          <p>Custom‑blended spray tans for weddings, holidays and events with streak‑free, camera‑ready results.</p>
+          <div class="service-meta">
+            <span class="service-price">From £25</span>
+            <a href="#booking" class="btn btn-tertiary">Learn More</a>
+          </div>
+        </div>
+      </article>
 
-    <section class="section">
-      <h3>Why clients love Life's A Beach</h3>
-      <div class="grid-3">
-        <article class="card">
-          <h4>Local, friendly team</h4>
-          <p>
-            Therapists and stylists who take time to listen, explain treatments and put you at ease, whether
-            you're visiting for the first time or are a regular.
-          </p>
-        </article>
-        <article class="card">
-          <h4>Great value offers</h4>
-          <p>
-            Regular saver deals on sunbeds and selected treatments, plus package options for nails, facials
-            and massage to make self-care affordable.
-          </p>
-        </article>
-        <article class="card">
-          <h4>Easy online booking</h4>
-          <p>
-            Browse treatments, prices and availability and secure your appointment instantly through Fresha,
-            with text reminders sent straight to your phone.
-          </p>
-        </article>
-      </div>
-    </section>
-  </main>
+      <!-- Memberships, Skincare, Beauty Treatments, Packages cards follow the same pattern -->
+    </div>
+  </section>
 
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <strong>Life's A Beach / LAB SPA</strong><br />
-        50 Manchester Rd, Mossley, Ashton-under-Lyne OL5 0AA
+  <!-- Why choose us -->
+  <section class="section" id="why">
+    <div class="section-heading">
+      <h3>Why Choose Us</h3>
+      <p>Every detail is designed around hygiene, results and a genuinely premium experience.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-icon">
+          <!-- icon placeholder -->
+          <span>🧴</span>
+        </div>
+        <div>
+          <h4>Fully sanitised rooms</h4>
+          <p>Every sunbed and treatment space is meticulously cleaned between clients.</p>
+        </div>
       </div>
-      <div>
-        Phone: <a href="tel:01457837933">01457 837933</a><br />
-        Online bookings via <a href="https://www.fresha.com/en-GB/lvp/lifes-a-beach-lab-spa-manchester-road-mossley-EvAN0E" target="_blank" rel="noopener noreferrer">Fresha</a>
+      <div class="why-item">
+        <div class="why-icon"><span>✨</span></div>
+        <div>
+          <h4>Latest tanning technology</h4>
+          <p>Modern equipment calibrated for safer, more even results.</p>
+        </div>
       </div>
+      <!-- Qualified staff, Premium lotions, Flexible memberships, Walk-ins welcome -->
+    </div>
+  </section>
+
+  <!-- Membership plans -->
+  <section id="memberships" class="section">
+    <div class="section-heading">
+      <h3>Membership Plans</h3>
+      <p>Bronze to Unlimited – flexible plans that keep your glow topped up all year.</p>
+    </div>
+    <div class="membership-grid">
+      <article class="membership-card">
+        <span class="membership-tier">Bronze</span>
+        <div class="membership-price">£35 / month</div>
+        <ul class="membership-benefits">
+          <li>60 minutes of sunbed time</li>
+          <li>Members‑only offers</li>
+          <li>Upgrade savings on spray tans</li>
+        </ul>
+        <a href="#booking" class="btn btn-secondary">Choose Bronze</a>
+      </article>
+      <!-- Silver, Gold, Unlimited cards in same style -->
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section">
+    <div class="section-heading">
+      <h3>Gallery</h3>
+      <p>Before & after transformations, interior details and real client moments.</p>
+    </div>
+    <div class="gallery-grid">
+      <figure class="gallery-item">
+        <img src="https://picsum.photos/seed/interior1/600/500" alt="Salon reception in warm beige tones">
+        <figcaption class="gallery-caption">Reception & lounge area.</figcaption>
+      </figure>
+      <!-- more interior & before/after images -->
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="section">
+    <div class="section-heading">
+      <h3>Reviews</h3>
+      <p>Trusted locally by brides, holidaymakers and everyday glow‑seekers.</p>
+    </div>
+    <div class="testimonials">
+      <!-- simple carousel container; JS will rotate -->
+      <div class="testimonial-slide">
+        <p>“The cleanest sunbeds I’ve ever used. Staff talk you through everything and my tan was perfect for my hen do.”</p>
+        <div class="testimonial-meta">
+          <span>★ ★ ★ ★ ★</span>
+          <span>Emily, Bride to Be</span>
+        </div>
+      </div>
+      <!-- more slides -->
+    </div>
+  </section>
+
+  <!-- Booking section -->
+  <section id="booking" class="section">
+    <div class="section-heading">
+      <h3>Book Your Glow</h3>
+      <p>Tell us what you’re planning – we’ll help you choose the perfect treatment.</p>
+    </div>
+    <div class="booking-layout">
+      <form class="form-card" aria-label="Booking form">
+        <div class="form-row">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" required>
+          </div>
+          <div>
+            <label for="service">Service</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option>Sunbeds</option>
+              <option>Spray Tan</option>
+              <option>Membership</option>
+              <option>Beauty Treatment</option>
+              <option>Package</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="date">Preferred date</label>
+            <input id="date" name="date" type="date">
+          </div>
+          <div>
+            <label for="time">Preferred time</label>
+            <input id="time" name="time" type="time">
+          </div>
+        </div>
+        <div>
+          <label for="notes">Notes (events, weddings, holidays)</label>
+          <textarea id="notes" name="notes" rows="4"
+            placeholder="Tell us about your occasion, skin type or any preferences."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Book Now</button>
+      </form>
       <div>
-        <a href="about.html">About</a> · <a href="services.html">Services</a> · <a href="contact.html">Contact</a>
+        <h4>Quick booking options</h4>
+        <p>You can also book directly via our online booking partner or call the salon:</p>
+        <ul>
+          <li><a href="https://www.fresha.com" target="_blank" rel="noopener noreferrer">Book via Fresha</a></li>
+          <li>Call us on <a href="tel:+441457837933">01457 837933</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="section-heading">
+      <h3>FAQ</h3>
+      <p>Answers to the most common questions about tanning, safety and preparation.</p>
+    </div>
+    <div class="faq-list">
+      <article class="faq-item">
+        <button class="faq-toggle">
+          <span>Is tanning safe?</span>
+          <span>+</span>
+        </button>
+        <div class="faq-content">
+          <p>We follow strict guidelines around session length, skin type and equipment hygiene. Our team will
+          advise you on safe usage based on your skin and goals.</p>
+        </div>
+      </article>
+      <!-- more FAQ items for spray tan duration, appointments, what to wear, prep etc. -->
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="section">
+    <div class="section-heading">
+      <h3>Skincare & Tanning Products</h3>
+      <p>Curated creams and aftercare designed to extend your glow at home.</p>
+    </div>
+    <div class="services-grid">
+      <!-- ecommerce-style cards for featured products; you can later wire to a shop -->
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="section-heading">
+      <h3>About the Salon</h3>
+      <p>Modern tanning, rooted in professional care and uncompromising cleanliness.</p>
+    </div>
+    <div class="booking-layout">
+      <div>
+        <img src="https://picsum.photos/seed/team/800/600"
+             alt="Professional tanning and beauty team in the salon">
+      </div>
+      <div>
+        <p>Life’s A Beach is a premium tanning and beauty studio created for people who want a healthy, confident
+        glow without compromising on cleanliness or professionalism.</p>
+        <p>Our team includes qualified tanning specialists and beauty therapists with years of experience in skin
+        health, bridal prep and event‑ready make‑up.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="section-heading">
+      <h3>Contact & Visit</h3>
+      <p>Find us, follow us and plan your visit.</p>
+    </div>
+    <div class="booking-layout">
+      <div class="form-card">
+        <h4>Details</h4>
+        <p><strong>Life's A Beach Tanning & Beauty</strong><br>50 Manchester Rd, Mossley OL5 0AA</p>
+        <p><strong>Phone:</strong> <a href="tel:+441457837933">01457 837933</a></p>
+        <p><strong>Email:</strong> <a href="mailto:hello@lifesabeach.co.uk">hello@lifesabeach.co.uk</a></p>
+        <p><strong>Opening hours:</strong> Tue–Sat, late nights on Thu & Fri.</p>
+      </div>
+      <div>
+        <!-- Google Maps iframe slot -->
+        <div class="map-placeholder">
+          Map integration goes here
+        </div>
+        <p>Parking is available nearby; please allow a few minutes to arrive and check in before your appointment.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <strong>Life's A Beach</strong><br>
+      Premium Tanning & Beauty Studio<br>
+      © 2026 Life's A Beach. All rights reserved.
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#memberships">Memberships</a></li>
+        <li><a href="#booking">Book</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Stay in Touch</h4>
+      <form>
+        <label for="newsletter-email">Newsletter</label>
+        <input id="newsletter-email" type="email" placeholder="Your email">
+        <button type="submit" class="btn btn-secondary">Sign Up</button>
+      </form>
+      <p>Follow us on Instagram @lifesabeach for live offers and before/after inspiration.</p>
+    </div>
+  </div>
+  <div class="back-to-top">
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<!-- Floating Book Now -->
+<div class="floating-book">
+  <a href="#booking" class="btn btn-primary">Book Now</a>
+</div>
+
 </body>
 </html>
