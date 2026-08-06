@@ -783,5 +783,93 @@ transform:translateY(-50%);
 transition:opacity .4s ease;
 
 }
+  /* ===========================
+FORM ERRORS
+=========================== */
+
+.error{
+font-size:.8rem;
+color:#d33;
+margin-top:.3rem;
+}
+
+/* ===========================
+TOAST
+=========================== */
+
+.toast{
+
+position:fixed;
+
+left:50%;
+
+bottom:30px;
+
+transform:translateX(-50%) translateY(40px);
+
+background:#2C2C2F;
+
+color:#fff;
+
+padding:14px 24px;
+
+border-radius:999px;
+
+opacity:0;
+
+transition:.35s;
+
+z-index:9999;
+
+box-shadow:0 20px 50px rgba(0,0,0,.2);
+
+}
+
+.toast.show{
+
+opacity:1;
+
+transform:translateX(-50%) translateY(0);
+
+}
+
+/* ===========================
+BUTTON RIPPLE
+=========================== */
+
+.btn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.ripple{
+
+position:absolute;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.35);
+
+transform:scale(0);
+
+animation:ripple .6s linear;
+
+pointer-events:none;
+
+}
+
+@keyframes ripple{
+
+to{
+
+transform:scale(4);
+
+opacity:0;
+
+}
+
 }
 
