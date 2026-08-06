@@ -477,6 +477,295 @@ document.addEventListener("DOMContentLoaded", () => {
                 previousImage();
 
             }
+/*
+=========================================
+PART 3
+Forms
+Utilities
+Accessibility
+=========================================
+*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /*
+    =====================================
+    BOOKING FORM
+    =====================================
+    */
+
+    const bookingForm = document.querySelector(".form-card");
+
+    if (bookingForm && bookingForm.tagName === "FORM") {
+
+        bookingForm.addEventListener("submit", e => {
+
+            e.preventDefault();
+
+            const name =
+                bookingForm.querySelector("#name");
+
+            const email =
+                bookingForm.querySelector("#email");
+
+            const phone =
+                bookingForm.querySelector("#phone");
+
+            const service =
+                bookingForm.querySelector("#service");
+
+            let valid = true;
+
+            bookingForm
+                .querySelectorAll(".error")
+                .forEach(error => error.remove());
+
+            function showError(input, message) {
+
+                valid = false;
+
+                const error =
+                    document.createElement("small");
+
+                error.className = "error";
+
+                error.textContent = message;
+
+                error.style.color = "#d33";
+
+                error.style.display = "block";
+
+                error.style.marginTop = ".35rem";
+
+                input.parentNode.appendChild(error);
+
+                input.style.borderColor = "#d33";
+
+            }
+
+            bookingForm
+                .querySelectorAll("input,select,textarea")
+                .forEach(el => {
+
+                    el.style.borderColor = "";
+
+                });
+
+            if (!name.value.trim())
+                showError(name, "Please enter your name.");
+
+            if (!email.value.trim())
+                showError(email, "Email is required.");
+
+            else if (
+                !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)
+            )
+                showError(email, "Enter a valid email.");
+
+            if (!phone.value.trim())
+                showError(phone, "Phone number required.");
+
+            if (!service.value)
+                showError(service, "Choose a service.");
+
+            if (!valid) return;
+
+            const button =
+                bookingForm.querySelector(
+                    "button[type='submit']"
+                );
+
+            const original = button.textContent;
+
+            button.disabled = true;
+
+            button.textContent = "Booking...";
+
+            setTimeout(() => {
+
+                button.textContent = "✓ Request Sent";
+
+                showToast(
+                    "Thank you! We'll contact you shortly."
+                );
+
+                bookingForm.reset();
+
+                setTimeout(() => {
+
+                    button.disabled = false;
+
+                    button.textContent = original;
+
+                }, 2500);
+
+            }, 1200);
+
+        });
+
+    }
+
+    /*
+    =====================================
+    NEWSLETTER
+    =====================================
+    */
+
+    const newsletter =
+        document.querySelector("footer form");
+
+    if (newsletter) {
+
+        newsletter.addEventListener("submit", e => {
+
+            e.preventDefault();
+
+            const input =
+                newsletter.querySelector("input");
+
+            if (!input.value.trim()) {
+
+                showToast("Please enter an email.");
+
+                return;
+
+            }
+
+            showToast("Thanks for subscribing!");
+
+            input.value = "";
+
+        });
+
+    }
+
+    /*
+    =====================================
+    DATE PICKER
+    =====================================
+    */
+
+    const date =
+        document.querySelector("#date");
+
+    if (date) {
+
+        const today = new Date();
+
+        today.setDate(today.getDate());
+
+        date.min =
+            today.toISOString().split("T")[0];
+
+    }
+
+    /*
+    =====================================
+    TOAST
+    =====================================
+    */
+
+    function showToast(message) {
+
+        let toast =
+            document.querySelector(".toast");
+
+        if (!toast) {
+
+            toast =
+                document.createElement("div");
+
+            toast.className = "toast";
+
+            document.body.appendChild(toast);
+
+        }
+
+        toast.textContent = message;
+
+        toast.classList.add("show");
+
+        clearTimeout(toast.timer);
+
+        toast.timer = setTimeout(() => {
+
+            toast.classList.remove("show");
+
+        }, 3500);
+
+    }
+
+    /*
+    =====================================
+    BUTTON RIPPLE
+    =====================================
+    */
+
+    document
+        .querySelectorAll(".btn")
+        .forEach(button => {
+
+            button.addEventListener("click", e => {
+
+                const circle =
+                    document.createElement("span");
+
+                const size =
+                    Math.max(
+                        button.clientWidth,
+                        button.clientHeight
+                    );
+
+                circle.style.width =
+                    circle.style.height =
+                    size + "px";
+
+                circle.style.left =
+                    e.offsetX - size / 2 + "px";
+
+                circle.style.top =
+                    e.offsetY - size / 2 + "px";
+
+                circle.className = "ripple";
+
+                button.appendChild(circle);
+
+                setTimeout(() => {
+
+                    circle.remove();
+
+                }, 600);
+
+            });
+
+        });
+
+    /*
+    =====================================
+    REDUCED MOTION
+    =====================================
+    */
+
+    if (
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches
+    ) {
+
+        document
+            .querySelectorAll("*")
+            .forEach(el => {
+
+                el.style.animation = "none";
+
+                el.style.transition = "none";
+
+            });
+
+    }
+
+});
+            
 
         });
 
